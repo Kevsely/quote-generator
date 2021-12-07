@@ -20,7 +20,7 @@ body {
 
 #quote-container {
     max-width: 50%;
-    max-height: 30%;
+    min-height: 30%;
     
     border: 1px solid rgb(255, 255, 255);    
     border-radius: 15px;
@@ -37,13 +37,13 @@ body {
 }
 
 #quote {
-    margin-left: 10px;
+    margin-left: 0.75rem;
     font-size: 2.75rem;
     font-weight: 600;
 }
 
 #author-line {
-    margin-top: 15px;
+    margin-top: 1rem;
     font-size: 2.2rem;
     font-style: italic;
 }
@@ -54,7 +54,7 @@ body {
 }
 
 button {
-    margin: 0 15px;
+    margin: 0 1rem;
 
     width: 8rem;
     height: 2.2rem;
@@ -62,6 +62,7 @@ button {
     color: #fff;
     background-color: #333;
     font-size: 1.2rem;
+    font-family: "Fuzzy Bubbles", cursive;
 
     border: 1px;
     border-radius: 10px;
@@ -75,4 +76,20 @@ button:hover {
 button:active {
     transform: translateY(5px);
     box-shadow: 0 1px rgba(102, 102, 102, 0.808);
+}
+
+@media screen and (max-width: 1000px) {
+    #quote-container {
+        width: 90%;
+        max-width: 600px;
+        margin: auto 1.3rem;
+    }
+
+    .fa-quote-left {
+        font-size: 3.50rem;
+    }
+
+    #quote {
+        font-size: 2.5rem;
+    }
 }
