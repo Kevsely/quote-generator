@@ -71,6 +71,8 @@ button {
     border: 1px;
     border-radius: 10px;
     box-shadow: 0 5px rgba(102, 102, 102, 0.808);
+
+    outline: none;
 }
 
 button:hover {
