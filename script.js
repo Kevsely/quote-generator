@@ -33,7 +33,7 @@ function newQuote() {
     //Displaying the selected quote
     elmt_quote.innerText = quoteObject.text
     //Adjustment for unknow author
-    if(!quoteObject)   elmt_author.innerText = "Unknown"
+    if(!quoteObject.author)   elmt_author.innerText = "Unknown"
     else    elmt_author.innerText = quoteObject.author
     //Adjustment for long quote
     if(quoteObject.text.length > 100)
