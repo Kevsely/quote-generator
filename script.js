@@ -1,8 +1,10 @@
 //Page Elements
+const ctn_quote = document.getElementById("quote-container")
 const elmt_quote = document.getElementById("quote")
 const elmt_author = document.getElementById("author")
 const btn_tweet = document.getElementById("button-twitter")
 const btn_newQuote = document.getElementById("button-new_quote")
+const loader = document.getElementById("loader")
 
 //Event listener
 btn_tweet.addEventListener("click", tweetQuote)
@@ -16,9 +18,12 @@ let quoteObject
 //Fetching Quote API
 async function getQuotes() {
     try {
+        showLoader();
         const response = await fetch(apiUrl)
         apiQuotes = await response.json()
-        newQuote();        
+        newQuote();
+        console.log("here");
+        hideLoader()    
     } catch (error) {
         console.log("Something went wrong", error)
     }
@@ -46,6 +51,17 @@ function newQuote() {
 function tweetQuote() {
     const tweetUrl = `https://twitter.com/intent/tweet?text="${quoteObject.text}" - ${quoteObject.author}`
     window.open(tweetUrl, "_blank")
+}
+
+//Displaying or hidding loader 
+function showLoader() {
+    loader.hidden = false
+    ctn_quote.hidden = true
+}
+
+function hideLoader() {
+    loader.hidden = true
+    ctn_quote.hidden = false
 }
 
 getQuotes();
