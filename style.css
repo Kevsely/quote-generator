@@ -42,6 +42,10 @@ body {
     font-weight: 600;
 }
 
+#quote.long-quote {
+    font-size: 2.5rem;
+}
+
 #author-line {
     margin: 1rem 0;
     font-size: 2.2rem;
@@ -91,6 +95,10 @@ button:active {
 
     #quote {
         font-size: 2rem;
+    }
+
+    #quote.long-quote {
+        font-size: 1.75rem;
     }
 
     #author-line {
