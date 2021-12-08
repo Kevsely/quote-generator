@@ -43,7 +43,7 @@ body {
 }
 
 #author-line {
-    margin-top: 1rem;
+    margin: 1rem 0;
     font-size: 2.2rem;
     font-style: italic;
 }
@@ -86,10 +86,14 @@ button:active {
     }
 
     .fa-quote-left {
-        font-size: 3.50rem;
+        font-size: 3rem;
     }
 
     #quote {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    #author-line {
+        font-size: 1.75rem;
     }
 }
