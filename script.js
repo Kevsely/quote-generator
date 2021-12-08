@@ -5,7 +5,7 @@ const btn_tweet = document.getElementById("button-twitter")
 const btn_newQuote = document.getElementById("button-new_quote")
 
 //Event listener
-btn_tweet.addEventListener("click", () => {})
+btn_tweet.addEventListener("click", tweetQuote)
 btn_newQuote.addEventListener("click", getQuotes)
 
 //Varibles
@@ -40,6 +40,12 @@ function newQuote() {
         elmt_quote.classList.add("long-quote")
     else
         elmt_quote.classList.remove("long-quote")
+}
+
+//Tweeting a quote 
+function tweetQuote() {
+    const tweetUrl = `https://twitter.com/intent/tweet?text="${quoteObject.text}" - ${quoteObject.author}`
+    window.open(tweetUrl, "_blank")
 }
 
 getQuotes();
